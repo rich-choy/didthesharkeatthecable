@@ -2,14 +2,6 @@ version: '3.7'
 
 services:
 
-  nginx:
-    image: nginx:1.17.10-alpine
-    ports:
-      - '3000:80'
-    volumes:
-      - ./docker/assets/nginx.conf:/etc/nginx/nginx.conf
-      - ./dist:/var/www/html
-
   server:
     build:
       context: .
