@@ -8,15 +8,25 @@
     </h1>
     <p v-if="sharkAteCable">
       {{ $t('situation_fuct') }}
+      <a href="http://google.com">
+        {{ $t('again') }}
+      </a>
     </p>
     <p v-else>
       {{ $t('situation_normal') }}
     </p>
+
+    <add-this-widget />
   </section>
 </template>
 
 <script>
+import AddThisWidget from '~/components/AddThisWidget'
+
 export default {
+  components: {
+    AddThisWidget,
+  },
   data () {
     return {
       sharkAteCable: process.env.SHARK_ATE_CABLE,
@@ -29,15 +39,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-h1 {
-  font-size: 10rem;
-}
-p {
-  font-size: 2rem;
-}
-h1, p {
-  text-align: center;
-}
-</style>

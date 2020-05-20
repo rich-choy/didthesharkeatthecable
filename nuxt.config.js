@@ -13,7 +13,6 @@ export default {
     SHARK_ATE_CABLE: true,
   },
 
-
   head: {
     title: 'Did the shark eat the cable?',
     meta: [
@@ -22,8 +21,15 @@ export default {
       { hid: 'description', name: 'description', content: 'Did the shark eat the cable?' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
-    ]
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css' },
+    ],
+    script: [
+      {
+        body: true,
+        src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ec4d9631b651a11',
+      },
+    ],
   },
 
   loading: false,
