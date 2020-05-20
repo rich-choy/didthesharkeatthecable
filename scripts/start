@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -aeuo pipefail
+
+if [ -n "$(git remote)" ]; then
+    if [ ! $(which git-lfs) ]; then
+        echo "You need Git LFS to run this project"
+        echo ""
+        echo "    https://git-lfs.github.com"
+        echo ""
+        exit 1
+    fi
+    git lfs pull
+fi
+
+git submodule init
+git submodule update
+
+# create the dotenv file if it doesn't exist
+if [ ! -f .env ]; then
+    source .env.default
+    cp .env.default .env
+    echo "DOCKER_HOST_UID=$(id -u)" >> .env
+    echo "DOCKER_HOST_GID=$(id -g)" >> .env
+    echo "Created boilerplate .env file at:"
+    echo ""
+    echo "    $(pwd)/.env"
+    echo ""
+fi
+
+source .env.default
+source .env
+
+################################################################################
+
+scripts/clean
+docker-compose up -d buildbox
+bin/yarn install
+docker-compose up -d
+docker-compose logs -f server
+

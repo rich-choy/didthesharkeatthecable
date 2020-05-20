@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+
+  server:
+    build:
+      context: .
+      args:
+        DOCKER_HOST_UID: '$DOCKER_HOST_UID'
+        DOCKER_HOST_GID: '$DOCKER_HOST_GID'
+    command: gosu runtime:runtime npm run dev
+    ports:
+      - '$DOCKER_HOST_HTTP_BIND_PORT:3000'
+    volumes:
+      - .:/project
+    environment:
+      CDN_ROOT: 'http://localhost/media'
+
+  buildbox:
+    build:
+      context: .
+      args:
+        DOCKER_HOST_UID: '$DOCKER_HOST_UID'
+        DOCKER_HOST_GID: '$DOCKER_HOST_GID'
+    volumes:
+      - .:/project
+    environment:
+      CDN_ROOT: 'http://localhost/media'

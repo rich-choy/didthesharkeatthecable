@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -aeuo pipefail
+
+NODE_ENV=production
+ENVIRONMENT=production
+
+git lfs pull
+npm run generate > /dev/null
+mv dist/200.html dist/index.html
+cp -R static/* dist
+
