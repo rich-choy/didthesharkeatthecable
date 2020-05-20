@@ -22,6 +22,11 @@ export default {
       sharkAteCable: process.env.SHARK_ATE_CABLE,
     }
   },
+  head () {
+    return {
+      title: this.$t('site_title'),
+    }
+  },
 }
 </script>
 

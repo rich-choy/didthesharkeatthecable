@@ -13,6 +13,8 @@ export default {
     SHARK_ATE_CABLE: true,
   },
 
+  seo: true,
+
   head: {
     title: 'Did the shark eat the cable?',
     meta: [
