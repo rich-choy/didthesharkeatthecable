@@ -1,4 +1,4 @@
-# innyte-copd
+# didthesharkeatthecable
 
 ## What is this?
 
@@ -10,6 +10,8 @@ This is a Dockerized [Nuxt.js](https://nuxtjs.org) project containing the InnYte
 
 - [Docker](https://docs.docker.com/engine/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
+- [Git](https://git-scm.com/downloads)
+- [Git LFS](https://git-lfs.github.com/)
 - [Bash shell](https://www.gnu.org/software/bash/) 
 
 ### How to run the project
