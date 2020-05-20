@@ -8,7 +8,7 @@
     </h1>
     <p v-if="sharkAteCable">
       {{ $t('situation_fuct') }}
-      <a href="http://google.com">
+      <a href="https://tuoitrenews.vn/news/society/20200519/internet-speed-in-vietnam-stutters-as-submarine-cable-breaks-down-again/54654.html" target="_blank">
         {{ $t('again') }}
       </a>
     </p>
