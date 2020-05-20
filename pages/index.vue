@@ -22,10 +22,6 @@ export default {
       sharkAteCable: process.env.SHARK_ATE_CABLE,
     }
   },
-  middleware (context) {
-    const { app, redirect } = context
-    return redirect(`/${app.i18n.locale}`)
-  },
 }
 </script>
 
