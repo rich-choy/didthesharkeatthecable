@@ -18,7 +18,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Doctors Answer' }
+      { hid: 'description', name: 'description', content: 'Did the shark eat the cable?' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' }
