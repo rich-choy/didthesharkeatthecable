@@ -15,6 +15,7 @@ services:
       - .:/project
     environment:
       CDN_ROOT: 'http://localhost/media'
+      GITHUB_REPO_HOMEPAGE: 'https://github.com/rich-choy/didthesharkeatthecable'
 
   buildbox:
     build:
@@ -26,3 +27,4 @@ services:
       - .:/project
     environment:
       CDN_ROOT: 'http://localhost/media'
+      GITHUB_REPO_HOMEPAGE: 'https://github.com/rich-choy/didthesharkeatthecable'

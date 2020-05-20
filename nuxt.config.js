@@ -11,6 +11,7 @@ export default {
 
   env: {
     SHARK_ATE_CABLE: true,
+    GITHUB_REPO_HOMEPAGE: process.env.GITHUB_REPO_HOMEPAGE,
   },
 
   head: {
