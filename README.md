@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is a Dockerized [Nuxt.js](https://nuxtjs.org) project containing the InnYte COPD website.
+This is a Dockerized [Nuxt.js](https://nuxtjs.org) project.
 
 ## Development
 
