@@ -13,7 +13,6 @@ export default {
     SHARK_ATE_CABLE: true,
   },
 
-  seo: true,
 
   head: {
     title: 'Did the shark eat the cable?',
@@ -27,7 +26,7 @@ export default {
     ]
   },
 
-  loading: { color: '#fff' },
+  loading: false,
 
   css: [
     '~/assets/scss/main.scss',
@@ -44,7 +43,8 @@ export default {
   modules: [
     // Doc: https://nuxt-community.github.io/nuxt-i18n
     ['nuxt-i18n', {
-
+      seo: true,
+      baseUrl: process.env.APP_URL || 'http://localhost',
     }],
   ],
 
@@ -56,7 +56,18 @@ export default {
   i18n: {
     langDir: 'i18n/',
     defaultLocale: 'en',
-    locales: ['en', 'vi'].map(iso => ({ code: iso, file: `${iso}.js`})),
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en.js',
+      },
+      {
+        code: 'vi',
+        iso: 'vi-VN',
+        file: 'vi.js',
+      },
+    ],
     loadLanguagesAsync: true,
     vueI18nLoader: true,
     vueI18n: {
